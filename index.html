@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Number Plate Specialists2</title>
+<title>The Number Plate Specialists</title>
+<div class="logo">
+  <a href="#top">
+    <img src="S - 2.jpeg" alt="The Number Plate Specialists Logo">
+  </a>
+</div>
+
 <style>
   body {
     margin: 0;
@@ -23,7 +29,21 @@
     top: 0;
     z-index: 1000;
   }
-  header .logo { color: #FFD700; font-size: 1.8rem; font-weight: bold; }
+  header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 60px; /* Adjust size as needed */
+  width: auto;
+  transition: transform 0.3s;
+}
+
+header .logo img:hover {
+  transform: scale(1.05);
+}
+
   nav a {
     color: #FFD700;
     margin-left: 20px;
