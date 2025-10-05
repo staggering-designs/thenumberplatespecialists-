@@ -30,11 +30,14 @@
   header .logo {
   display: flex;
   align-items: center;
+  height: 70px;
 }
 
 header .logo img {
-  height: 70px; /* Adjust as needed */
+  max-height: 70px; /* Adjust as needed */
   width: auto;
+  object-fit: contain;
+  display: block;
   transition: transform 0.3s ease;
 }
 
