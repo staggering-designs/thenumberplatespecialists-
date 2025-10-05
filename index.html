@@ -37,4 +37,230 @@
     position: relative;
     overflow: hidden;
   }
-  .s
+  .slides {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+  }
+  .slides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  @keyframes slide {
+    0% { margin-left: 0; }
+    30% { margin-left: 0; }
+    35% { margin-left: -100%; }
+    65% { margin-left: -100%; }
+    70% { margin-left: -200%; }
+    100% { margin-left: -200%; }
+  }
+  .hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 8px #000;
+  }
+  .hero-text p { font-size: 1.2rem; color: #fff; margin-bottom: 20px; }
+  .hero-text a {
+    background-color: #FFD700;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .hero-text a:hover { background-color: #fff; }
+
+  /* Product section */
+  .products {
+    padding: 60px 20px;
+    background-color: #111;
+  }
+  .products h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .product-card {
+    background-color: #222;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  .product-card:hover { transform: scale(1.05); }
+  .product-card img { max-width: 100%; border-radius: 6px; margin-bottom: 15px; }
+  .product-card h3 { color: #FFD700; font-size: 1.5rem; margin-bottom: 10px; }
+  .product-card .price { color: #FFD700; font-weight: bold; font-size: 1.2rem; }
+
+  /* Testimonials & Trust */
+  .testimonials {
+    background-color: #000;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .testimonials h2 { color: #FFD700; font-size: 2.5rem; margin-bottom: 40px; }
+  .testimonial {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-style: italic;
+  }
+  .testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFD700;
+  }
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .badge {
+    border: 2px solid #FFD700;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+  /* Contact */
+  .contact {
+    background-color: #111;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .contact h2 { color: #FFD700; font-size: 2.5rem; margin-bottom: 30px; }
+  .contact p { margin-bottom: 20px; font-size: 1.1rem; }
+  .contact a { color: #FFD700; font-weight: bold; }
+
+  /* Floating buttons */
+  .call-now, .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .call-now {
+    background-color: #FFD700;
+    color: #000;
+    left: 20px;
+  }
+  .whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    right: 20px;
+  }
+  .call-now:hover { background-color: #fff; }
+  .whatsapp:hover { background-color: #1EBE5D; }
+
+  @media (min-width: 768px) {
+    .call-now { display: none; }
+  }
+
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #FFD700;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">The Number Plate Specialists</div>
+  <nav>
+    <a href="#products">Plates</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="slider">
+  <div class="slides">
+    <img src="https://via.placeholder.com/1200x500/000000/FFD700?text=Premium+3D+Plates" alt="Hero 1">
+    <img src="https://via.placeholder.com/1200x500/111111/FFD700?text=Custom+Plates+Made+to+Order" alt="Hero 2">
+    <img src="https://via.placeholder.com/1200x500/222222/FFD700?text=Fast+UK+Delivery" alt="Hero 3">
+  </div>
+  <div class="hero-text">
+    <h1>Your Premium Number Plates</h1>
+    <p>DVLA-approved, 3D gel, carbon, and custom plates crafted to perfection.</p>
+    <a href="#products">View Plates & Prices</a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2>Our Number Plates</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x100?text=Standard+Plate" alt="Standard Plate">
+      <h3>Standard Reflective</h3>
+      <p>DVLA compliant and road-legal acrylic plates.</p>
+      <div class="price">£14.99</div>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x100?text=3D+Gel" alt="3D Gel Plate">
+      <h3>3D Raised Gel</h3>
+      <p>Premium raised 3D gel characters for a stylish finish.</p>
+      <div class="price">£24.99</div>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x100?text=Carbon+Effect" alt="Carbon Effect">
+      <h3>Carbon Effect</h3>
+      <p>Sporty carbon-fibre background design.</p>
+      <div class="price">£29.99</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial">“Amazing quality and super fast delivery!” <span>— Alex T.</span></div>
+  <div class="testimonial">“Best plates I’ve ever bought. The 3D gel looks stunning.” <span>— Sarah L.</span></div>
+  <div class="testimonial">“Excellent service, very professional and affordable.” <span>— Mark J.</span></div>
+  <div class="trust-badges">
+    <div class="badge">DVLA Compliant</div>
+    <div class="badge">Fast UK Delivery</div>
+    <div class="badge">Lifetime Guarantee</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 <a href="tel:+447710517524">+44 7710 517524</a></p>
+  <p>📧 <a href="mailto:thenumberplatespecialists@gmail.com">thenumberplatespecialists@gmail.com</a></p>
+</section>
+
+<a href="tel:+447710517524" class="call-now">📞 Call Now</a>
+<a href="https://wa.me/447710517524" class="whatsapp">💬 WhatsApp</a>
+
+<footer>
+  © 2025 The Number Plate Specialists. All rights reserved.
+</footer>
+
+</body>
+</html>
